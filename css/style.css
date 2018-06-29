@@ -1,0 +1,128 @@
+/*
+  FILE: style.css
+  AUTHOR: Daniel Burkhart
+*/
+
+/*
+  CUSTOM STYLES
+*/
+
+/* General styles */
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2em;
+  color: #ffbf5b;
+}
+
+h2 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 1.2rem;
+  color: #ffbf5b;
+}
+
+p {
+  color: #333;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #ffbf5b;
+}
+
+span + span {
+  margin-left: 50px;
+}
+
+/*
+  CHECK BROWSER SUPPORT
+*/
+@supports (grid-column-start: 1) {
+  /*
+    PAGE LAYOUT
+  */
+  header[role="banner"],
+  main[role="main"],
+  footer[role="contentinfo"] {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  /* Header styles */
+  header[role="banner"] {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+  }
+
+  header[role="banner"] > nav {
+    width: 100%;
+  }
+
+  header[role="banner"] > nav > h1 {
+    display: inline-block;
+  }
+
+  header[role="banner"] > nav > ul:first-child,
+  header[role="banner"] > nav > ul:last-child {
+    padding: 10px;
+    text-align: center;
+    line-height: 25px;
+    word-spacing: 2em;
+  }
+
+  header[role="banner"] > nav > ul:first-child > li,
+  header[role="banner"] > nav > ul:last-child > li {
+    display: inline-block;
+  }
+
+  header[role="banner"] > nav > ul:first-child {
+    float: left;
+  }
+
+  header[role="banner"] > nav > ul:last-child {
+    float: right;
+  }
+
+  /* Main content styles */
+  main[role="main"] {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  main[role="main"] > section[role="region"] > article {
+    display: inline-block;
+  }
+
+  main[role="main"] > section[role="region"] > article > a > img {
+    float: left;
+    width: 60%;
+    height: auto;
+  }
+
+  main[role="main"] > section[role="region"] > article > p {
+    float: right;
+  }
+
+  main[role="main"] > section[role="region"] > article > h2 {
+    font-size: 5rem;
+  }
+
+  main[role="main"] > section[role="region"] > article > h3 {
+    font-size: 2rem;
+  }
+
+  /* Footer styles */
+  footer[role="contentinfo"] {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 0 10px 10px;
+  }
+}
